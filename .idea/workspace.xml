@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9042554-ec79-4422-8cd5-68e622b0f52a" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="c9042554-ec79-4422-8cd5-68e622b0f52a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/UtilFunctions.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/jwt/JwtTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/jwt/JwtTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/jwt/TestJwtHeader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/jwt/TestJwtPayload.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/UtilFunctions.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhenxuan/utils/jwt/JwtTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhenxuan/utils/jwt/JwtTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/java_program/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="D:\java_program\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="mavenHome" value="D:/Java_Program/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="D:\Java_Program\apache-maven-3.5.2\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -26,7 +39,17 @@
     <option name="vmOptions" value="-Dmaven.wagon.http.ssl.insecure=true" />
   </component>
   <component name="ProjectId" id="1fiAPtulTlQ6PUExtOmx8SC9pwG" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/util" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -41,18 +64,6 @@
       <recent name="D:\Idea_workspace\UtilFunctions\src\main\java\com\zhenxuan\utils" />
       <recent name="D:\Idea_workspace\UtilFunctions\src\main\resources" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.JwtTest">
     <configuration name="AsymmetricalEncryptionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -115,15 +126,50 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596690518971</updated>
+      <workItem from="1596856578303" duration="2801000" />
+      <workItem from="1596936978320" duration="9547000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1596856665266">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596856665266" />
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom" timestamp="1596986087075">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596986087075" />
+    <state width="1493" height="150" key="GridCell.Tab.0.center" timestamp="1596986087075">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596986087075" />
+    <state width="1493" height="150" key="GridCell.Tab.0.left" timestamp="1596986087075">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596986087075" />
+    <state width="1493" height="150" key="GridCell.Tab.0.right" timestamp="1596986087075">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596986087075" />
+    <state x="270" y="55" key="SettingsEditor" timestamp="1596856669653">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596856669653" />
+    <state x="431" y="145" key="search.everywhere.popup" timestamp="1596938625341">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596938625341" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/jwt/JwtTest.java</url>
-          <line>39</line>
+          <line>98</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -145,11 +191,6 @@
           <url>jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.7.0/jjwt-0.7.0.jar!/io/jsonwebtoken/impl/DefaultJwtParser.class</url>
           <line>192</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/jwt/JwtTest.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

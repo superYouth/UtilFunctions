@@ -6,8 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/report")
@@ -19,6 +22,12 @@ public class ReportInfoController {
         return "Hello!";
     }
 
+    /**
+     * 单文件上传
+     * @param file
+     * @return
+     * @throws IOException
+     */
     @PostMapping(path = "/getExcelInfo")
     public Object getExcelInfo(@RequestParam("file") MultipartFile file) throws IOException {
         if (file.isEmpty()) {
@@ -29,5 +38,21 @@ public class ReportInfoController {
         System.out.println("文件大小："+file.getSize());
 
         return "";
+    }
+
+    /**
+     * 多文件上传
+     * @param request
+     * @return
+     */
+    @PostMapping("/uploadFiles")
+    public String getExcelInfo(HttpServletRequest request) {
+
+        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+        Map<String, MultipartFile> fileMap = multipartRequest.getFileMap();
+
+//        poiFun.getExcelData(fileMap);
+
+        return "OK";
     }
 }

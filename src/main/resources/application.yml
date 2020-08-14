@@ -1,11 +1,11 @@
 ---
 server:
   port: ${PORT:8888}
-#  servlet:
-#    context-path: /auth
+##  servlet:
+##    context-path: /auth
 spring:
   application:
-    name: UtilFunctions-service
+    name: UtilFunctions
 #  redis:
 #    host: ${REDIS_HOST:127.0.0.1}
 #    port: ${REDIS_PORT:6379}

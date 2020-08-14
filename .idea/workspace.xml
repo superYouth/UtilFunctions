@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9042554-ec79-4422-8cd5-68e622b0f52a" name="Default Changelist" comment="" />
+    <list default="true" id="c9042554-ec79-4422-8cd5-68e622b0f52a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UtilFunctions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/TestToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/jwt/TestToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/util/JwtUtils.java.bak" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/jwt/JwtUtils.java.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/UtilFunctions.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -27,7 +48,8 @@
   </component>
   <component name="ProjectId" id="1fiAPtulTlQ6PUExtOmx8SC9pwG" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/zhenxuan/utils/util" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springboot-security-oauth2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -36,6 +58,13 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Idea_workspace\UtilFunctions\src\main\java\com\zhenxuan\utils\jwt" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zhenxuan" />
+      <recent name="com.zhenxuan.utils.poi" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Idea_workspace\UtilFunctions\src\main\java\com\zhenxuan\utils\util" />
       <recent name="D:\Idea_workspace\UtilFunctions\src\main\java\com\zhenxuan\utils" />
@@ -54,13 +83,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JwtTest">
-    <configuration name="AsymmetricalEncryptionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhenxuan.utils.encryption.AsymmetricalEncryptionTest" />
+  <component name="RunManager" selected="Application.application">
+    <configuration name="application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhenxuan.application" />
       <module name="UtilFunctions" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zhenxuan.utils.encryption.*" />
+          <option name="PATTERN" value="com.zhenxuan.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,15 +97,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JwtTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhenxuan.utils.jwt.JwtTest" />
+    <configuration name="All in UtilFunctions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UtilFunctions" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zhenxuan.utils.jwt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,11 +121,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.application" />
+      <item itemvalue="JUnit.All in UtilFunctions" />
+      <item itemvalue="JUnit.JwtTest.testJwt" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JwtTest" />
+        <item itemvalue="Application.application" />
+        <item itemvalue="JUnit.All in UtilFunctions" />
         <item itemvalue="JUnit.JwtTest.testJwt" />
-        <item itemvalue="Application.AsymmetricalEncryptionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -117,6 +146,19 @@
       <updated>1596690518971</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

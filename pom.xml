@@ -173,10 +173,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 使用xls格式时、只要导入poi-version-yyyymmdd.jar -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.17</version>
+            <version>4.1.1</version>
+        </dependency>
+        <!-- 使用xlsx格式 要导入poi-ooxml-version-yyyymmdd.jar -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.1</version>
         </dependency>
         <dependency>
             <groupId>commons-lang</groupId>

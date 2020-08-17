@@ -173,6 +173,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
         <!-- 使用xls格式时、只要导入poi-version-yyyymmdd.jar -->
         <dependency>
             <groupId>org.apache.poi</groupId>

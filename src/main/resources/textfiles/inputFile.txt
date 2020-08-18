@@ -1,0 +1,401 @@
+{
+    "audit_item_name": "Mg-Al",
+    "check_group_data": [
+        {
+            "check_group_seq": 1,
+            "check_group_type": "原料",
+            "check_item_data": [
+                {
+                    "check_item_seq": 1,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "進料檢驗是否都有SIP﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 2,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "進料檢驗是否有工具和設備?"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 3,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "原料是否烘烤SOP料"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 4,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "加料是否滿足烘料時間和溫度要求﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 5,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "烘烤是否有對應的點檢記錄"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "check_group_seq": 2,
+            "check_group_type": "壓鑄成型",
+            "check_item_data": [
+                {
+                    "check_item_seq": 1,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "公/母模溫度設定SOP是否有﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 2,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "公/母模溫度設定SOP與實際機台溫度的差異是否在管制范圍內﹖（特別注意冬天天氣）"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 3,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "成型压铸條件表是否與標准一致﹖（可查看PPAP)"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 4,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "實際機台的成型压铸周期與標准周期是否一致﹖（注意商廠不要為了產出量而降低成型周期）"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 5,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "有無模具保養SOP?"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 6,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "有無模具保養記錄﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 7,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "是否有冷料產品報廢規則﹖(新開機和停機10分鐘以上需考慮冷料問題）"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 8,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "是否有冷料產品報廢記錄﹖（開機﹐停機等時）"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 9,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "是否有坩堝和湯料的處理規范﹖（如撓浮渣和清底渣等）"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 10,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "是否有成型作業SOP﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 11,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "人員的作業手法是否與SOP相符合"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "check_group_seq": 3,
+            "check_group_type": "產品",
+            "check_item_data": [
+                {
+                    "check_item_seq": 1,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "有無懸掛SIP﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 2,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "常發生問題點SIP有無更新和備注﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 3,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "是否有Wistron承認的樣品﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 4,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "是否有對應機台首件確認產品和記錄﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 5,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "有無尺寸和變形度的量測記錄 ﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 6,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "有無縮水,毛邊等確認記錄 ﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 7,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "有無尺寸SPC管制 和預警機制﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 8,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "有無尺寸﹐變形度等量測治具﹖ "
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 9,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "量測手法是否明確定義﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 10,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "測量的位置是否依標准規定 ﹖"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 11,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "有無巡檢制度（一般2小時1次）"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                }
+            ]
+        }
+    ]
+}

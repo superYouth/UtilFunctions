@@ -1,94 +1,92 @@
 package com.zhenxuan.utils.util;
 
-import com.alibaba.fastjson.JSON;
 import org.junit.Test;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.ResourceUtils;
 
-import javax.annotation.Resource;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringUtilTest {
 
     @Test
-    public void compressString() throws ScriptException, IOException {
+    public void compressJsonString() throws ScriptException, IOException {
 
-        String configStr = "";
+        StringBuilder configStr = new StringBuilder();
         File inputFile = ResourceUtils.getFile("classpath:textfiles/inputFile.txt");
         File outputFile = ResourceUtils.getFile("classpath:textfiles/outputFile.txt");
-
+        // 方式一：使用转换流
         InputStream is = new FileInputStream(inputFile);
         InputStreamReader isr = new InputStreamReader(is,"UTF8");
 
-        OutputStream os = new FileOutputStream(outputFile);
-//        OutputStreamWriter osw = new OutputStreamWriter()
+        // 方式二：或者使用FileReader
+//        FileReader fr = new FileReader(inputFile);
 
-        int read = isr.read();
-        System.out.println(read);
-
-//
-//        FileReader fr = new FileReader(isr);
-//        BufferedReader br = new BufferedReader(fr);
-//        String configStr = "";
-//        String line = null;
-//        while ((line = br.readLine()) != null) {
-//            configStr += line;
-//        }
-//
-//        String str = "hahaha\r\nheihei\n";
-//        String str1 = "{" +
-//                "\"name\": \"Park    er\"" +"\t\r\n"+
-//                "}";
-//        System.out.println(str1);
-//        ScriptEngineManager manager = new ScriptEngineManager();
-//        ScriptEngine script = manager.getEngineByName("javascript");
-//        Object eval = script.eval("JSON.stringify(" + str1 + ")");
-//        System.out.println(eval.toString());
-
-    }
-
-    public static void main(String[] args) throws IOException {
-//        File file = new File("C:\\Users\\wh1909006\\Desktop\\新建文件夹\\QPA_COMMON.txt");
-
-        FileReader fr = new FileReader("C:\\Users\\wh1909006\\Desktop\\新建文件夹\\QPA_COMMON.txt");
-        BufferedReader br = new BufferedReader(fr);
-        String configStr = "";
+        BufferedReader br = new BufferedReader(isr);
         String line = null;
         while ((line = br.readLine()) != null) {
-            configStr += line;
+            configStr.append(line);
         }
+        ScriptEngineManager manager = new ScriptEngineManager();
+        ScriptEngine script = manager.getEngineByName("javascript");
+        String result = (String) script.eval("JSON.stringify(" + configStr.toString() + ")");
+        System.out.println(result);
 
-//        configStr.replace("\\t","");
-//        configStr.replace("\\r\\n","");
+        // 使用转换流写入（也可以用FileWriter）
+        OutputStream os = new FileOutputStream(outputFile,false);
+        OutputStreamWriter osw = new OutputStreamWriter(os,"UTF8");
+        osw.write(result);
+        osw.flush();
+        osw.close();
+    }
 
-        configStr = configStr.replaceAll("\r|\n", "");
-        configStr = configStr.replaceAll("\\s{2}", "");
+    @Test
+    public void regexString() throws ScriptException, IOException {
 
+        String configStr = "{\n" +
+                "                    \"check_item_seq\": 1,\n" +
+                "                    \"check_item_desc\": {\n" +
+                "                        \"en\": \"\",\n" +
+                "                        \"zh\": \"進料檢驗是否都有SIP﹖\"\n" +
+                "                    },\n" +
+                "                    \"item_threshold_score\": 1,\n" +
+                "                    \"photo_max_count\": 3,\n" +
+                "                    \"item_score_list\": [\n" +
+                "                        \"N/A\",\n" +
+                "                        0,\n" +
+                "                        1\n" +
+                "                    ]\n" +
+                "                }";
+        System.out.println("before length: "+configStr.length());
 
-//        Pattern p = Pattern.compile("\\s*|\t|");
-//        Matcher m = p.matcher(configStr);
-//        configStr = m.replaceAll("");
-//        FileWriter fw = new FileWriter("C:\\Users\\wh1909006\\Desktop\\新建文件夹\\QPA_COMMON111.txt");
-//        BufferedWriter bw = new BufferedWriter(fw);
-//        bw.write(configStr,0,configStr.length());
+        // 方式一：使用replace
+/*        configStr = configStr.replace("\n", "");
+        configStr = configStr.replace(" ","");
+        System.out.println("after length: "+configStr.length());*/
+
+        // 方式二：使用replaceAll
+/*        configStr = configStr.replaceAll("\\s", "");
+        System.out.println("after length: "+configStr.length());*/
+        // 防止JSON中value值中的空格被替换（多于2个空格的部分会被替换）
+//        configStr = configStr.replaceAll("\\s{2}", "");
+
+        // 方式三：使用Pattern
+        Pattern pattern = Pattern.compile("\\s*|\t|");
+        Matcher matcher = pattern.matcher(configStr);
+        configStr = matcher.replaceAll("");
+        System.out.println("after length: "+configStr.length());
         System.out.println(configStr);
     }
+
 }

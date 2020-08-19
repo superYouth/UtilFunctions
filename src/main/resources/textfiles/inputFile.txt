@@ -1,15 +1,15 @@
 {
-    "audit_item_name": "Mg-Al",
+    "audit_item_name": "Cable",
     "check_group_data": [
         {
             "check_group_seq": 1,
-            "check_group_type": "原料",
+            "check_group_type": "Cable",
             "check_item_data": [
                 {
                     "check_item_seq": 1,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "進料檢驗是否都有SIP﹖"
+                        "zh": "IQC是否有检验SOP"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -23,7 +23,7 @@
                     "check_item_seq": 2,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "進料檢驗是否有工具和設備?"
+                        "zh": "IQC是否有RoHS量测仪器"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -37,7 +37,7 @@
                     "check_item_seq": 3,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "原料是否烘烤SOP料"
+                        "zh": "IQC是否有定义RoHS抽样比例和量测记录"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -51,7 +51,7 @@
                     "check_item_seq": 4,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "加料是否滿足烘料時間和溫度要求﹖"
+                        "zh": "所有设备和仪器是否有合格校验标签"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -65,83 +65,7 @@
                     "check_item_seq": 5,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "烘烤是否有對應的點檢記錄"
-                    },
-                    "item_threshold_score": 1,
-                    "photo_max_count": 3,
-                    "item_score_list": [
-                        "N/A",
-                        0,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "check_group_seq": 2,
-            "check_group_type": "壓鑄成型",
-            "check_item_data": [
-                {
-                    "check_item_seq": 1,
-                    "check_item_desc": {
-                        "en": "",
-                        "zh": "公/母模溫度設定SOP是否有﹖"
-                    },
-                    "item_threshold_score": 1,
-                    "photo_max_count": 3,
-                    "item_score_list": [
-                        "N/A",
-                        0,
-                        1
-                    ]
-                },
-                {
-                    "check_item_seq": 2,
-                    "check_item_desc": {
-                        "en": "",
-                        "zh": "公/母模溫度設定SOP與實際機台溫度的差異是否在管制范圍內﹖（特別注意冬天天氣）"
-                    },
-                    "item_threshold_score": 1,
-                    "photo_max_count": 3,
-                    "item_score_list": [
-                        "N/A",
-                        0,
-                        1
-                    ]
-                },
-                {
-                    "check_item_seq": 3,
-                    "check_item_desc": {
-                        "en": "",
-                        "zh": "成型压铸條件表是否與標准一致﹖（可查看PPAP)"
-                    },
-                    "item_threshold_score": 1,
-                    "photo_max_count": 3,
-                    "item_score_list": [
-                        "N/A",
-                        0,
-                        1
-                    ]
-                },
-                {
-                    "check_item_seq": 4,
-                    "check_item_desc": {
-                        "en": "",
-                        "zh": "實際機台的成型压铸周期與標准周期是否一致﹖（注意商廠不要為了產出量而降低成型周期）"
-                    },
-                    "item_threshold_score": 1,
-                    "photo_max_count": 3,
-                    "item_score_list": [
-                        "N/A",
-                        0,
-                        1
-                    ]
-                },
-                {
-                    "check_item_seq": 5,
-                    "check_item_desc": {
-                        "en": "",
-                        "zh": "有無模具保養SOP?"
+                        "zh": "OP是否有training 后上岗,并持有上岗证"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -155,7 +79,7 @@
                     "check_item_seq": 6,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "有無模具保養記錄﹖"
+                        "zh": "是否有首件机制并做记录"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -169,7 +93,7 @@
                     "check_item_seq": 7,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "是否有冷料產品報廢規則﹖(新開機和停機10分鐘以上需考慮冷料問題）"
+                        "zh": "SOP中是否有定义烙铁的温度"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -183,7 +107,7 @@
                     "check_item_seq": 8,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "是否有冷料產品報廢記錄﹖（開機﹐停機等時）"
+                        "zh": "电烙铁温度是有定期点检并记录(4H一次)"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -197,7 +121,7 @@
                     "check_item_seq": 9,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "是否有坩堝和湯料的處理規范﹖（如撓浮渣和清底渣等）"
+                        "zh": "焊接人员是否有定期清理电烙铁锡渣"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -211,7 +135,7 @@
                     "check_item_seq": 10,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "是否有成型作業SOP﹖"
+                        "zh": "补焊后是否有质检人员检查补焊品质"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -225,27 +149,7 @@
                     "check_item_seq": 11,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "人員的作業手法是否與SOP相符合"
-                    },
-                    "item_threshold_score": 1,
-                    "photo_max_count": 3,
-                    "item_score_list": [
-                        "N/A",
-                        0,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "check_group_seq": 3,
-            "check_group_type": "產品",
-            "check_item_data": [
-                {
-                    "check_item_seq": 1,
-                    "check_item_desc": {
-                        "en": "",
-                        "zh": "有無懸掛SIP﹖"
+                        "zh": "检查补焊品质是否有设备辅助, 如放大镜,显微镜"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -256,10 +160,10 @@
                     ]
                 },
                 {
-                    "check_item_seq": 2,
+                    "check_item_seq": 12,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "常發生問題點SIP有無更新和備注﹖"
+                        "zh": "Hot Bar焊接是否有SOP定义设定焊接温度"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -270,10 +174,10 @@
                     ]
                 },
                 {
-                    "check_item_seq": 3,
+                    "check_item_seq": 13,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "是否有Wistron承認的樣品﹖"
+                        "zh": "是否定期点检Hot Bar焊接头的温度并记录"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -284,10 +188,10 @@
                     ]
                 },
                 {
-                    "check_item_seq": 4,
+                    "check_item_seq": 14,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "是否有對應機台首件確認產品和記錄﹖"
+                        "zh": "点胶是否有控制胶量,如何控制"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -298,10 +202,10 @@
                     ]
                 },
                 {
-                    "check_item_seq": 5,
+                    "check_item_seq": 15,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "有無尺寸和變形度的量測記錄 ﹖"
+                        "zh": "点完胶红外烘烤的温度和能量是否有定义"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -312,10 +216,10 @@
                     ]
                 },
                 {
-                    "check_item_seq": 6,
+                    "check_item_seq": 16,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "有無縮水,毛邊等確認記錄 ﹖"
+                        "zh": "红外烘烤温度和能量是否有定期点检并记录"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -326,10 +230,10 @@
                     ]
                 },
                 {
-                    "check_item_seq": 7,
+                    "check_item_seq": 17,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "有無尺寸SPC管制 和預警機制﹖"
+                        "zh": "测试设备是否有Golden sample作校验,确保是正常工作的"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -340,10 +244,10 @@
                     ]
                 },
                 {
-                    "check_item_seq": 8,
+                    "check_item_seq": 18,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "有無尺寸﹐變形度等量測治具﹖ "
+                        "zh": "测试不良率是否有被记录"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -354,10 +258,10 @@
                     ]
                 },
                 {
-                    "check_item_seq": 9,
+                    "check_item_seq": 19,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "量測手法是否明確定義﹖"
+                        "zh": "是否有定义明确的停线标准"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -368,10 +272,10 @@
                     ]
                 },
                 {
-                    "check_item_seq": 10,
+                    "check_item_seq": 20,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "測量的位置是否依標准規定 ﹖"
+                        "zh": "是否有定义不良品维修的流程"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,
@@ -382,10 +286,80 @@
                     ]
                 },
                 {
-                    "check_item_seq": 11,
+                    "check_item_seq": 21,
                     "check_item_desc": {
                         "en": "",
-                        "zh": "有無巡檢制度（一般2小時1次）"
+                        "zh": "待测品,已测良品, 不良品是否有明显的区分"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 22,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "Label贴敷是否有防呆和检验机制,防止错料"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 23,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "IPQC是否有定期巡检并做记录"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 24,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "QE是否有可靠度测试的计划,并有落实"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 25,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "可靠度测试的报告是否有记录并保存好"
+                    },
+                    "item_threshold_score": 1,
+                    "photo_max_count": 3,
+                    "item_score_list": [
+                        "N/A",
+                        0,
+                        1
+                    ]
+                },
+                {
+                    "check_item_seq": 26,
+                    "check_item_desc": {
+                        "en": "",
+                        "zh": "QE设备是否在规定的点检周期内"
                     },
                     "item_threshold_score": 1,
                     "photo_max_count": 3,

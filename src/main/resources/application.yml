@@ -1,8 +1,8 @@
 ---
 server:
   port: ${PORT:8888}
-##  servlet:
-##    context-path: /auth
+  servlet:
+    context-path: /UtilFunctions
 spring:
   application:
     name: UtilFunctions

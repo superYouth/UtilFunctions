@@ -5,6 +5,7 @@ import com.zhenxuan.entity.AuditItemConfig;
 import com.zhenxuan.entity.CheckGroupData;
 import com.zhenxuan.entity.CheckItemData;
 import com.zhenxuan.entity.CheckItemDesc;
+import com.zhenxuan.utils.poi.POIUtils;
 import org.apache.commons.compress.utils.Lists;
 import org.apache.poi.ss.usermodel.*;
 import org.springframework.stereotype.Service;
@@ -23,36 +24,43 @@ public class ReportInfoService {
     public Object getExcelInfo() throws IOException {
 
         File excelFile = ResourceUtils.getFile("classpath:textfiles/CSR.xls");
+        Workbook workbook = POIUtils.getWorkbook(excelFile);
 
-        FileInputStream fis = new FileInputStream(excelFile);
-
-        Workbook workbook = WorkbookFactory.create(fis);
-        Sheet sheet = workbook.getSheetAt(3);
-
-        int colEnd = 2;
-        int rowStart = 9;
-        //获最后一行
-        int rowEnd = sheet.getLastRowNum();
-        System.out.println("rowEnd:" + rowEnd);
 
         AuditItemConfig auditItemConfig = new AuditItemConfig();
         List<CheckGroupData> groupList = Lists.newArrayList();
-        CheckGroupData checkGroupData = new CheckGroupData();
 
-        List<CheckItemData> resultList = getConfig(sheet, rowStart, rowEnd);
+        for (int i = 3; i <14 ; i++) {
+            System.out.println("sheet index: "+i);
+            Sheet sheet = workbook.getSheetAt(i);
+            List<CheckItemData> resultList = getConfig(sheet);
+            CheckGroupData checkGroupData = new CheckGroupData();
+            checkGroupData.setCheck_item_data(resultList);
+            groupList.add(checkGroupData);
+        }
+        auditItemConfig.setCheck_group_data(groupList);
 
-        String result = JSON.toJSONString(resultList);
+        
+        String result = JSON.toJSONString(auditItemConfig);
         System.out.println(result);
         return "";
     }
 
-    private List<CheckItemData> getConfig(Sheet sheet, int rowIndex, int rowEnd){
+    private List<CheckItemData> getConfig(Sheet sheet) {
+
+        int rowStart = 9;
+        //获最后一行
+        int rowEnd = sheet.getLastRowNum();
         List<CheckItemData> itemConfigList = Lists.newArrayList();
 
         CheckItemData checkItemData = null;
-        do {
-            Row row = sheet.getRow(rowIndex);
+        for (int i = rowStart; i < rowEnd; i++) {
+            Row row = sheet.getRow(i);
             Cell cell = row.getCell(1);
+            CellStyle cellStyle = cell.getCellStyle();
+            BorderStyle borderBottom = cellStyle.getBorderBottom();
+            System.out.println(borderBottom);
+
             if (cell != null && CellType.NUMERIC.equals(cell.getCellType())) {
 
                 String SeqValue = String.valueOf(cell.getNumericCellValue());
@@ -81,26 +89,21 @@ public class ReportInfoService {
                 CheckItemDesc check_item_desc = checkItemData.getCheck_item_desc();
                 Pattern pattern = Pattern.compile("[\u4e00-\u9fa5]");
                 Matcher matcher = pattern.matcher(desc);
-                if(matcher.find()){
+                if (matcher.find()) {
                     check_item_desc.setZh(check_item_desc.getZh().concat(desc));
-                }else{
-                    check_item_desc.setEn(check_item_desc.getEn().concat(desc));
+                } else {
+                    check_item_desc.setEn(check_item_desc.getEn().concat(" "+desc));
                 }
             }
-            if (rowIndex >= 61) {
-                System.out.println("haha");
-            }
-            Cell nextRowSeqCell = sheet.getRow(rowIndex + 1).getCell(1);
-            Cell nextRowDescCell = sheet.getRow(rowIndex + 1).getCell(2);
-            if (nextRowSeqCell != null && CellType.NUMERIC.equals(nextRowSeqCell.getCellType())) {
+            if (borderBottom.equals(BorderStyle.DASHED)) {
                 itemConfigList.add(checkItemData);
             }
-            if(CellType.BLANK.equals(nextRowDescCell.getCellType())){
+            // 结束扫描
+            if (BorderStyle.THIN.equals(borderBottom)) {
                 break;
             }
 
-            rowIndex++;
-        } while (rowIndex <= rowEnd);
+        }
 
         return itemConfigList;
     }

@@ -1,33 +1,33 @@
 package com.zhenxuan.entity;
 
-import java.util.List;
-import java.util.Map;
+import com.alibaba.fastjson.annotation.JSONField;
 
+import java.util.List;
 public class CheckItemData {
 
-/*    {
-        "check_item_seq": 1,
-            "check_item_desc": {
-        "en": "",
-                "zh": "有独立排风设备,以保证通风."
-    },
-        "item_threshold_score": 0,
-            "photo_max_count": 3,
-            "item_score_list": [
-        "N/A",
-                0,
-                1
-                        ]
-    },*/
-
+    @JSONField(ordinal = 1)
     private Integer check_item_seq;
+    @JSONField(ordinal = 2)
+    private Boolean essential_item;
+    @JSONField(ordinal = 3)
     private CheckItemDesc check_item_desc;
+    @JSONField(ordinal = 4)
     private Integer item_threshold_score;
+    @JSONField(ordinal = 5)
     private Integer photo_max_count;
+    @JSONField(ordinal = 6)
     private List<String> item_score_list;
 
     public Integer getCheck_item_seq() {
         return check_item_seq;
+    }
+
+    public Boolean getEssential_item() {
+        return essential_item;
+    }
+
+    public void setEssential_item(Boolean essential_item) {
+        this.essential_item = essential_item;
     }
 
     public void setCheck_item_seq(Integer check_item_seq) {

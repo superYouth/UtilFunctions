@@ -12,11 +12,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 @Service
 public class ReportInfoService {
@@ -29,19 +29,21 @@ public class ReportInfoService {
 
         AuditItemConfig auditItemConfig = new AuditItemConfig();
         List<CheckGroupData> groupList = Lists.newArrayList();
+        auditItemConfig.setCheck_group_data(groupList);
 
         for (int i = 3; i <14 ; i++) {
-            System.out.println("sheet index: "+i);
             Sheet sheet = workbook.getSheetAt(i);
             List<CheckItemData> resultList = getConfig(sheet);
             CheckGroupData checkGroupData = new CheckGroupData();
+
+            checkGroupData.setCheck_group_seq(i-2);
+            checkGroupData.setCheck_group_type(sheet.getSheetName().trim().substring(2));
             checkGroupData.setCheck_item_data(resultList);
             groupList.add(checkGroupData);
         }
-        auditItemConfig.setCheck_group_data(groupList);
 
         
-        String result = JSON.toJSONString(auditItemConfig);
+        String result = JSON.toJSONString(auditItemConfig,false);
         System.out.println(result);
         return "";
     }
@@ -55,17 +57,26 @@ public class ReportInfoService {
 
         CheckItemData checkItemData = null;
         for (int i = rowStart; i < rowEnd; i++) {
+
             Row row = sheet.getRow(i);
             Cell cell = row.getCell(1);
             CellStyle cellStyle = cell.getCellStyle();
+            // IndexedColors.RED
+            short foregroundColor = cellStyle.getFillForegroundColor();
+
+            BorderStyle borderTop = cellStyle.getBorderTop();
+            if (borderTop.equals(BorderStyle.DASHED)) {
+                itemConfigList.add(checkItemData);
+                itemConfigList = itemConfigList.stream().distinct().collect(Collectors.toList());
+            }
             BorderStyle borderBottom = cellStyle.getBorderBottom();
-            System.out.println(borderBottom);
 
             if (cell != null && CellType.NUMERIC.equals(cell.getCellType())) {
 
-                String SeqValue = String.valueOf(cell.getNumericCellValue());
+//                String seqValue = String.valueOf(cell.getNumericCellValue());
+                String seqValue = POIUtils.getCellData(cell);
                 String desc = String.valueOf(row.getCell(2).getStringCellValue()).trim();
-                String[] numArr = SeqValue.split("\\.");
+                String[] numArr = seqValue.split("\\.");
 
                 checkItemData = new CheckItemData();
                 checkItemData.setItem_threshold_score(3);
@@ -83,9 +94,11 @@ public class ReportInfoService {
                 checkItemDesc.setEn(desc);
                 checkItemDesc.setZh("");
                 checkItemData.setCheck_item_desc(checkItemDesc);
+                checkItemData.setEssential_item(foregroundColor == IndexedColors.RED.getIndex());
 
             } else {
-                String desc = String.valueOf(row.getCell(2).getStringCellValue()).trim();
+//                String desc = String.valueOf(row.getCell(2).getStringCellValue()).trim();
+                String desc = POIUtils.getCellData(row,2);
                 CheckItemDesc check_item_desc = checkItemData.getCheck_item_desc();
                 Pattern pattern = Pattern.compile("[\u4e00-\u9fa5]");
                 Matcher matcher = pattern.matcher(desc);
@@ -97,9 +110,11 @@ public class ReportInfoService {
             }
             if (borderBottom.equals(BorderStyle.DASHED)) {
                 itemConfigList.add(checkItemData);
+                itemConfigList = itemConfigList.stream().distinct().collect(Collectors.toList());
             }
             // 结束扫描
             if (BorderStyle.THIN.equals(borderBottom)) {
+                itemConfigList.add(checkItemData);
                 break;
             }
 

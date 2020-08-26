@@ -29,13 +29,14 @@ public class ReportInfoController {
      * @throws IOException
      */
     @PostMapping(path = "/getExcelInfo")
-    public Object getExcelInfo(@RequestParam("file") MultipartFile file) throws IOException {
+    public Object getExcelInfo(@RequestParam("file") MultipartFile file, @RequestParam("name") String name) throws IOException {
         if (file.isEmpty()) {
             return "上传失败，请选择文件";
         }
 
         String fileName = file.getOriginalFilename();
         System.out.println("文件大小："+file.getSize());
+        System.out.println("name: "+name);
 
         return "";
     }
